@@ -3,7 +3,7 @@
         "enabled": true,
         "actions": [
             {
-                "action": "./vendor/bin/pint --test",
+                "action": "./vendor/bin/pint --test  --dirty",
                 "options": [],
                 "conditions": []
             }

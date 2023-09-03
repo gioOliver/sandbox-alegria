@@ -26,11 +26,13 @@ Caso você queira ver o que ele alterou, é só rodar o
 ./vendor/bin/pint -v
 ```
 
-E, se você não quer que ele toque no seu código apenas o julgue, é só rodar o comando
-abaixo que ele diz tudo de torto que você escreveu 
+E, se você não quer que ele toque no seu código apenas o julgue o que você alterou, é só rodar o comando
+abaixo que ele diz tudo de torto que você escreveu.
+
+Caso queira verificar todo o projeto, rode sem o `--dirty`
 
 ``` shell 
-./vendor/bin/pint --test
+./vendor/bin/pint --test --dirty
 ```
 
 Com o Pint em mãos, instalaremos agora o Captain Hook. Esse vai ser reponsavel por 
@@ -58,7 +60,7 @@ A única que usaremos nesse caso é a do pré-commit, com isso o arquivo terá a
         "enabled": true,
         "actions": [
             {
-                "action": "./vendor/bin/pint --test",
+                "action": "./vendor/bin/pint --test --dirty",
                 "options": [],
                 "conditions": []
             }
@@ -67,6 +69,6 @@ A única que usaremos nesse caso é a do pré-commit, com isso o arquivo terá a
 }
 ```
 
-Nesse caso, usaremos o comando do pint como `--test`, desse modo, o git não permite que
+Nesse caso, usaremos o comando do pint como `--test --dirty`, desse modo, o git não permite que
 o código seja commitado sem estar formatado da maneira correta, obrigando o desenvolvedor
 a rodar o pint na mão para commitar.
