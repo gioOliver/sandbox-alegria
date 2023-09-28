@@ -8,7 +8,7 @@ A principal função do pint é formatar o seu código do jeito mais show de bol
 Você pode manter a configuração padrão ou pode criar o seu próprio pint.json para deixar
 o código formatado do jeitinho que você quiser.
 
-Primeiro de tudo, instalaremos o Pint
+Primeiro de tudo, instalaremos o Pint.
 
 ``` shell
 composer require laravel/pint --dev
